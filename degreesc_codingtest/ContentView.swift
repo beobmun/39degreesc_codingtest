@@ -8,9 +8,16 @@
 import SwiftUI
 
 struct ContentView: View {
+    
     var body: some View {
-        Text("Hello, world!")
-            .padding()
+        GeometryReader { geometry in
+            VStack {
+                LocationSearchView(geometry)
+                List {
+                    
+                }
+            }
+        }
     }
 }
 

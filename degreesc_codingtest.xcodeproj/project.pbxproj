@@ -14,6 +14,11 @@
 		7A46179527FAC9AC00141360 /* degreesc_codingtestTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A46179427FAC9AC00141360 /* degreesc_codingtestTests.swift */; };
 		7A46179F27FAC9AC00141360 /* degreesc_codingtestUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A46179E27FAC9AC00141360 /* degreesc_codingtestUITests.swift */; };
 		7A4617A127FAC9AC00141360 /* degreesc_codingtestUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A4617A027FAC9AC00141360 /* degreesc_codingtestUITestsLaunchTests.swift */; };
+		7A4617AE27FACA3100141360 /* LocationSearchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A4617AD27FACA3100141360 /* LocationSearchView.swift */; };
+		7A80715D27FAD24D00CCFE77 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 7A80715C27FAD24D00CCFE77 /* Alamofire */; };
+		7A80715F27FAD27800CCFE77 /* MetaWeather_API.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A80715E27FAD27800CCFE77 /* MetaWeather_API.swift */; };
+		7A80716127FAD4A100CCFE77 /* LocationData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A80716027FAD4A100CCFE77 /* LocationData.swift */; };
+		7A80716327FAD62E00CCFE77 /* LocationSearchViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A80716227FAD62E00CCFE77 /* LocationSearchViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,6 +49,10 @@
 		7A46179A27FAC9AC00141360 /* degreesc_codingtestUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = degreesc_codingtestUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		7A46179E27FAC9AC00141360 /* degreesc_codingtestUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = degreesc_codingtestUITests.swift; sourceTree = "<group>"; };
 		7A4617A027FAC9AC00141360 /* degreesc_codingtestUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = degreesc_codingtestUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		7A4617AD27FACA3100141360 /* LocationSearchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationSearchView.swift; sourceTree = "<group>"; };
+		7A80715E27FAD27800CCFE77 /* MetaWeather_API.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MetaWeather_API.swift; sourceTree = "<group>"; };
+		7A80716027FAD4A100CCFE77 /* LocationData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationData.swift; sourceTree = "<group>"; };
+		7A80716227FAD62E00CCFE77 /* LocationSearchViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationSearchViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -51,6 +60,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7A80715D27FAD24D00CCFE77 /* Alamofire in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -96,6 +106,10 @@
 			children = (
 				7A46178327FAC9AC00141360 /* degreesc_codingtestApp.swift */,
 				7A46178527FAC9AC00141360 /* ContentView.swift */,
+				7A4617AD27FACA3100141360 /* LocationSearchView.swift */,
+				7A80716227FAD62E00CCFE77 /* LocationSearchViewModel.swift */,
+				7A80716027FAD4A100CCFE77 /* LocationData.swift */,
+				7A80715E27FAD27800CCFE77 /* MetaWeather_API.swift */,
 				7A46178727FAC9AC00141360 /* Assets.xcassets */,
 				7A46178927FAC9AC00141360 /* Preview Content */,
 			);
@@ -143,6 +157,9 @@
 			dependencies = (
 			);
 			name = degreesc_codingtest;
+			packageProductDependencies = (
+				7A80715C27FAD24D00CCFE77 /* Alamofire */,
+			);
 			productName = degreesc_codingtest;
 			productReference = 7A46178027FAC9AC00141360 /* degreesc_codingtest.app */;
 			productType = "com.apple.product-type.application";
@@ -215,6 +232,9 @@
 				Base,
 			);
 			mainGroup = 7A46177727FAC9AC00141360;
+			packageReferences = (
+				7A80715B27FAD24D00CCFE77 /* XCRemoteSwiftPackageReference "Alamofire" */,
+			);
 			productRefGroup = 7A46178127FAC9AC00141360 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -257,8 +277,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7A80715F27FAD27800CCFE77 /* MetaWeather_API.swift in Sources */,
 				7A46178627FAC9AC00141360 /* ContentView.swift in Sources */,
+				7A4617AE27FACA3100141360 /* LocationSearchView.swift in Sources */,
+				7A80716327FAD62E00CCFE77 /* LocationSearchViewModel.swift in Sources */,
 				7A46178427FAC9AC00141360 /* degreesc_codingtestApp.swift in Sources */,
+				7A80716127FAD4A100CCFE77 /* LocationData.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -585,6 +609,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		7A80715B27FAD24D00CCFE77 /* XCRemoteSwiftPackageReference "Alamofire" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Alamofire/Alamofire.git";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		7A80715C27FAD24D00CCFE77 /* Alamofire */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 7A80715B27FAD24D00CCFE77 /* XCRemoteSwiftPackageReference "Alamofire" */;
+			productName = Alamofire;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 7A46177827FAC9AC00141360 /* Project object */;
 }
