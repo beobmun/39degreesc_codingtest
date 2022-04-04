@@ -13,14 +13,13 @@ class LocationSearchViewModel: ObservableObject {
     var subscription = Set<AnyCancellable>()
     
     @Published var isLoading: Bool = false
-    @Published var searchedLocation = [LocationItem]()
+    @Published var searchedLocation = [IdentifiableLocation]()
     
     var fetchLocationSubject = PassthroughSubject<String, Never>()
     
     init() {
         fetchLocationSubject.sink { [weak self] receivedValue in
             guard let self = self else { return }
-            print(receivedValue)
             self.fetchLocation(receivedValue)
         }
         .store(in: &subscription)
@@ -28,18 +27,25 @@ class LocationSearchViewModel: ObservableObject {
     
     func fetchLocation(_ location: String) {
         isLoading = true
-        AF.request(Router.serchLocaion(query: location))
+        AF.request(Router.searchLocaion(query: location))
             .publishDecodable(type: [LocationItem].self)
+            .compactMap { $0.value }
             .sink { [weak self] completion in
                 guard let self = self else { return }
                 self.isLoading = false
             } receiveValue: { [weak self] receivedValue in
                 guard let self = self else { return }
-                if let value = receivedValue.value {
-                    self.searchedLocation = value
-                }
-                print("\(self.searchedLocation)")
+                self.makeIdentifiableLocation(receivedValue)
+//                print("\(self.searchedLocation)")
             }
             .store(in: &subscription)
+    }
+    
+    func makeIdentifiableLocation(_ locationItems: [LocationItem]) {
+        var location = [IdentifiableLocation]()
+        for item in locationItems {
+            location.append(IdentifiableLocation(location: item))
+        }
+        searchedLocation = location
     }
 }

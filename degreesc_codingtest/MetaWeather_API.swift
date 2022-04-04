@@ -8,10 +8,10 @@
 import Foundation
 import Alamofire
 
-let BASE_URL = "https://www.metaweather.com/api/"
+let BASE_URL = "https://www.metaweather.com/"
 
 enum Router: URLRequestConvertible {
-    case serchLocaion(query: String)
+    case searchLocaion(query: String)
     
     var baseURL: URL {
         return URL(string: BASE_URL)!
@@ -19,20 +19,20 @@ enum Router: URLRequestConvertible {
     
     var endPoint: String {
         switch self {
-            case .serchLocaion:
-                return "location/search"
+            case .searchLocaion:
+                return "api/location/search"
         }
     }
     
     var method: HTTPMethod {
         switch self {
-            case .serchLocaion: return .get
+            case .searchLocaion: return .get
         }
     }
     
     var parameters: Parameters {
         switch self {
-            case let .serchLocaion(query):
+            case let .searchLocaion(query):
                 var params = Parameters()
                 params["query"] = query
                 return params
@@ -45,8 +45,9 @@ enum Router: URLRequestConvertible {
         request.method = method
         
         switch self {
-            case .serchLocaion:
+            case .searchLocaion:
                 request = try URLEncoding.default.encode(request, with: parameters)
+
         }
         return request
     }

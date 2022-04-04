@@ -7,8 +7,12 @@
 
 import Foundation
 
+struct IdentifiableLocation: Identifiable {
+    var id = UUID()
+    var location: LocationItem
+}
+
 struct LocationItem: Codable {
-//    var id = UUID()
     var title: String
     var location_type: String
     var woeid: Int

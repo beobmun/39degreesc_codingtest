@@ -8,14 +8,16 @@
 import SwiftUI
 
 struct ContentView: View {
+    @ObservedObject var locationSearchViewModel =  LocationSearchViewModel()
     
     var body: some View {
         GeometryReader { geometry in
             VStack {
-                LocationSearchView(geometry)
-                List {
-                    
+                LocationSearchView(locationSearchViewModel)
+                List(locationSearchViewModel.searchedLocation) { location in
+                    WeatherInfoCardView(geometry, location)
                 }
+                .listStyle(.plain)
             }
         }
     }
