@@ -30,7 +30,6 @@ class WeatherInfoCardViewModel: ObservableObject {
             .sink { [weak self] receivedValue in
                 guard let self = self else { return }
                 self.weather = self.weatherTempRound(receivedValue.consolidated)
-                print(self.weather)
             }
             .store(in: &subscription)
     }

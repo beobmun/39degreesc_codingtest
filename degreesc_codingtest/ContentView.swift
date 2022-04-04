@@ -18,6 +18,9 @@ struct ContentView: View {
                     WeatherInfoCardView(geometry, location)
                 }
                 .listStyle(.plain)
+                .onTapGesture {
+                    hideKeyboard()
+                }
             }
         }
     }

@@ -115,8 +115,7 @@
 				7A46178327FAC9AC00141360 /* degreesc_codingtestApp.swift */,
 				7A46178527FAC9AC00141360 /* ContentView.swift */,
 				7AB97CE727FAF04700079D5E /* LocationSearch */,
-				7A80716427FAE70000CCFE77 /* WeatherInfoCardView.swift */,
-				7AB97CE827FAF7BF00079D5E /* WeatherInfoCardViewModel.swift */,
+				7ABE2BBC27FB1ACE00F9C766 /* WeatherInfo */,
 				7AB97CEA27FAF82500079D5E /* WeatherData.swift */,
 				7A80716027FAD4A100CCFE77 /* LocationData.swift */,
 				7A80715E27FAD27800CCFE77 /* MetaWeather_API.swift */,
@@ -158,6 +157,15 @@
 				7A80716227FAD62E00CCFE77 /* LocationSearchViewModel.swift */,
 			);
 			path = LocationSearch;
+			sourceTree = "<group>";
+		};
+		7ABE2BBC27FB1ACE00F9C766 /* WeatherInfo */ = {
+			isa = PBXGroup;
+			children = (
+				7A80716427FAE70000CCFE77 /* WeatherInfoCardView.swift */,
+				7AB97CE827FAF7BF00079D5E /* WeatherInfoCardViewModel.swift */,
+			);
+			path = WeatherInfo;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

@@ -8,6 +8,7 @@
 import Foundation
 import Combine
 import Alamofire
+import UIKit
 
 class LocationSearchViewModel: ObservableObject {
     var subscription = Set<AnyCancellable>()
@@ -36,7 +37,6 @@ class LocationSearchViewModel: ObservableObject {
             } receiveValue: { [weak self] receivedValue in
                 guard let self = self else { return }
                 self.makeIdentifiableLocation(receivedValue)
-//                print("\(self.searchedLocation)")
             }
             .store(in: &subscription)
     }
@@ -49,3 +49,5 @@ class LocationSearchViewModel: ObservableObject {
         searchedLocation = location
     }
 }
+
+
