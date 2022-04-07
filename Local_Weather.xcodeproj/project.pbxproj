@@ -11,6 +11,12 @@
 		7A4CA1A127FEAB010087299F /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A4CA1A027FEAB010087299F /* ContentView.swift */; };
 		7A4CA1A327FEAB020087299F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7A4CA1A227FEAB020087299F /* Assets.xcassets */; };
 		7A4CA1A627FEAB020087299F /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7A4CA1A527FEAB020087299F /* Preview Assets.xcassets */; };
+		7A4CA1AD27FEABE50087299F /* WeatherCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A4CA1AC27FEABE50087299F /* WeatherCardView.swift */; };
+		7AF0B0A627FEB242004955FE /* WeatherViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AF0B0A527FEB242004955FE /* WeatherViewModel.swift */; };
+		7AF0B0A827FEBB71004955FE /* Data.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AF0B0A727FEBB71004955FE /* Data.swift */; };
+		7AF0B0AB27FEBBF6004955FE /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 7AF0B0AA27FEBBF6004955FE /* Alamofire */; };
+		7AF0B0AE27FEBC05004955FE /* URLImage in Frameworks */ = {isa = PBXBuildFile; productRef = 7AF0B0AD27FEBC05004955FE /* URLImage */; };
+		7AF0B0B027FEC8E7004955FE /* LocationViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AF0B0AF27FEC8E7004955FE /* LocationViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -19,6 +25,10 @@
 		7A4CA1A027FEAB010087299F /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		7A4CA1A227FEAB020087299F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		7A4CA1A527FEAB020087299F /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		7A4CA1AC27FEABE50087299F /* WeatherCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherCardView.swift; sourceTree = "<group>"; };
+		7AF0B0A527FEB242004955FE /* WeatherViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherViewModel.swift; sourceTree = "<group>"; };
+		7AF0B0A727FEBB71004955FE /* Data.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Data.swift; sourceTree = "<group>"; };
+		7AF0B0AF27FEC8E7004955FE /* LocationViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -26,6 +36,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7AF0B0AE27FEBC05004955FE /* URLImage in Frameworks */,
+				7AF0B0AB27FEBBF6004955FE /* Alamofire in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -53,6 +65,10 @@
 			children = (
 				7A4CA19E27FEAB010087299F /* Local_WeatherApp.swift */,
 				7A4CA1A027FEAB010087299F /* ContentView.swift */,
+				7A4CA1AC27FEABE50087299F /* WeatherCardView.swift */,
+				7AF0B0AF27FEC8E7004955FE /* LocationViewModel.swift */,
+				7AF0B0A527FEB242004955FE /* WeatherViewModel.swift */,
+				7AF0B0A727FEBB71004955FE /* Data.swift */,
 				7A4CA1A227FEAB020087299F /* Assets.xcassets */,
 				7A4CA1A427FEAB020087299F /* Preview Content */,
 			);
@@ -83,6 +99,10 @@
 			dependencies = (
 			);
 			name = Local_Weather;
+			packageProductDependencies = (
+				7AF0B0AA27FEBBF6004955FE /* Alamofire */,
+				7AF0B0AD27FEBC05004955FE /* URLImage */,
+			);
 			productName = Local_Weather;
 			productReference = 7A4CA19B27FEAB010087299F /* Local_Weather.app */;
 			productType = "com.apple.product-type.application";
@@ -111,6 +131,10 @@
 				Base,
 			);
 			mainGroup = 7A4CA19227FEAB010087299F;
+			packageReferences = (
+				7AF0B0A927FEBBF6004955FE /* XCRemoteSwiftPackageReference "Alamofire" */,
+				7AF0B0AC27FEBC05004955FE /* XCRemoteSwiftPackageReference "url-image" */,
+			);
 			productRefGroup = 7A4CA19C27FEAB010087299F /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -138,6 +162,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				7A4CA1A127FEAB010087299F /* ContentView.swift in Sources */,
+				7AF0B0B027FEC8E7004955FE /* LocationViewModel.swift in Sources */,
+				7AF0B0A827FEBB71004955FE /* Data.swift in Sources */,
+				7AF0B0A627FEB242004955FE /* WeatherViewModel.swift in Sources */,
+				7A4CA1AD27FEABE50087299F /* WeatherCardView.swift in Sources */,
 				7A4CA19F27FEAB010087299F /* Local_WeatherApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -275,6 +303,7 @@
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -304,6 +333,7 @@
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -341,6 +371,38 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		7AF0B0A927FEBBF6004955FE /* XCRemoteSwiftPackageReference "Alamofire" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Alamofire/Alamofire.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.0.0;
+			};
+		};
+		7AF0B0AC27FEBC05004955FE /* XCRemoteSwiftPackageReference "url-image" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/dmytro-anokhin/url-image";
+			requirement = {
+				branch = main;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		7AF0B0AA27FEBBF6004955FE /* Alamofire */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 7AF0B0A927FEBBF6004955FE /* XCRemoteSwiftPackageReference "Alamofire" */;
+			productName = Alamofire;
+		};
+		7AF0B0AD27FEBC05004955FE /* URLImage */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 7AF0B0AC27FEBC05004955FE /* XCRemoteSwiftPackageReference "url-image" */;
+			productName = URLImage;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 7A4CA19327FEAB010087299F /* Project object */;
 }
